@@ -54,8 +54,8 @@ pipeline{
                 script{
                    withDockerRegistry(credentialsId: 'docker', toolName: 'docker'){   
                        sh "docker build -t hotstar ."
-                       sh "docker tag hotstar sarvjeet908/hotstar:latest "
-                       sh "docker push sarvjeet908/hotstar:latest "
+                       sh "docker tag hotstar sarvjeet908/hotstar:2 "
+                       sh "docker push sarvjeet908/hotstar:2 "
                     }
                 }
             }
@@ -67,7 +67,7 @@ pipeline{
         }
         stage('Deploy to container'){
             steps{
-                sh 'docker run -d --name hotstar -p 3000:3000 sarvjeet908/hotstar:latest'
+                sh 'docker run -d --name hotstar -p 3000:3000 sarvjeet908/hotstar:2'
             }
         }
 
