@@ -88,7 +88,7 @@ pipeline{
             steps {
                 sh '''
                     echo "Applying Kubernetes manifests..."
-                    kubectl apply -f k8s/
+                    kubectl apply -f K8S/
                 '''
             }
         }
