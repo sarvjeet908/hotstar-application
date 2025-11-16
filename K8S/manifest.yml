@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hotstar-container
-        image: sarvjeet908/hotstar
+        image: sarvjeet908/hotstar:2
         ports:
         - containerPort: 80
 ---
@@ -32,5 +32,6 @@ spec:
   ports:
   - port: 80
     targetPort: 80
+
 
 
